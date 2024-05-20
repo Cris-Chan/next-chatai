@@ -1,5 +1,6 @@
 import { openai } from "@ai-sdk/openai";
-import { StreamingTextResponse, streamText } from "ai";
+import { z } from "zod";
+import { StreamingTextResponse, streamText, tool } from "ai";
 
 export async function POST(req: Request) {
   const { messages } = await req.json();
